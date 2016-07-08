@@ -266,7 +266,53 @@ else
 		</div>
 		</form>
 
-		
+		<?php
+		// Mostrar únicamente esta parte si hay al menos un pago introducido.
+		if(count($payments) > 0)
+		{
+		?>
+	    	<table id="register">
+	    	<thead>
+			<tr>
+			<th style="width:11%;"><?php echo $this->lang->line('common_delete1'); ?></th>
+			<th style="width:60%;"><?php echo 'Tipo'; ?></th>
+			<th style="width:18%;"><?php echo 'Monto'; ?></th>
+
+
+			</tr>
+			</thead>
+			<tbody id="payment_contents">
+			<?php
+				foreach($payments as $payment_id=>$payment)
+				{
+				echo form_open("sales/edit_payment/$payment_id",array('id'=>'edit_payment_form'.$payment_id));
+				?>
+	            <tr>
+	            <td><?php echo anchor( "sales/delete_payment/$payment_id", '['.$this->lang->line('common_delete1').']' ); ?></td>
+
+							<td><?php echo $payment['payment_type']; ?></td>
+							<td style="text-align:right;"><?php echo to_currency( $payment['payment_amount'] ); ?></td>
+
+
+				</tr>
+				</form>
+				<?php
+				}
+				?>
+			</tbody>
+			</table>
+		    <br />
+		<?php
+		}
+		?>
+
+
+
+	</div>
+
+	<?php
+	}
+	?>
 
 
 </div>
