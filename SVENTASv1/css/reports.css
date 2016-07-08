@@ -1,0 +1,63 @@
+#report_list h3 {
+   
+	color: #151515;
+	padding: 3px;
+	font-family: Arial, sans-serif;
+   
+}
+
+#report_list li ul li
+{
+	margin-left: 35px;
+	list-style-type: none;
+    /*margin: 0px;*/
+    padding: 1px;
+    width: 200px;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+	
+}
+
+#report_list ul li {
+    /*background-color: #706D6D;*/
+	background-color: #D7D7D7;
+	border: 5px solid #B5B4B4;
+	
+}
+
+#report_list ul li a {
+    color: #151515;
+    text-decoration: none;
+    /*text-transform: uppercase;*/
+    display: block;
+    padding: 10px 10px 10px 20px;
+}
+
+#report_list ul li a:hover {
+    background: #666;
+    border-left: 15px solid #666;
+    color: #fff;
+}
+
+#report_date_range_simple
+{
+	margin-bottom: 3px;
+}
+.report 
+{
+	font-size: .84em;
+}
+#report_summary
+{
+	margin: 0 auto;
+	text-align: center;
+}
+
+#report_summary .summary_row
+{
+}
+
+#chart_wrapper
+{
+	text-align: center;
+}
