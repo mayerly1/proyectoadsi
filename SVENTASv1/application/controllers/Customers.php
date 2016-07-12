@@ -24,12 +24,7 @@ class Customers extends Person_controller
 	/*
 	Devuelve las filas de la tabla de datos de clientes. Esto se llama con AJAX.
 	*/
-	function search()
-	{
-		$search=$this->input->post('search');
-		$data_rows=get_people_manage_table_data_rows($this->Customer->search($search),$this);
-		echo $data_rows;
-	}
+
 	
 	/*
 	Da sugerencias de búsqueda en base a lo que está siendo buscado
